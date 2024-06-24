@@ -7,11 +7,12 @@ with open("reviews.txt", "r") as f:
 		if count % 1000 == 0: # 1000 的倍數
 			print(len(data))
 
-print(len(data)) # 清單長度
+print("檔案讀取完了， 總共有", len(data), "筆資料") # 清單長度
 
-# print(data) # 清單
-print(data[0]) # 第一筆
-print("----------")
-print(data[1]) # 第二筆
+sum_len = 0
+for d in data:
+	sum_len = sum_len + len(d) # sum_len += len(d)
+	# print(sum_len) # 總共有多少個字
 
+print("留言的平均長度為", sum_len / len(data))
 
